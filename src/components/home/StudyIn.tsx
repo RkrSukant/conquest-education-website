@@ -154,7 +154,7 @@ const StudyIn = () => {
                   <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
                   <p className="mb-4">{destination.description}</p>
                   <button className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-2 px-4 rounded-lg transition-colors">
-                    Explore Programs
+                    Learn More
                   </button>
                 </div>
               </motion.div>

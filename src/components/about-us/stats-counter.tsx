@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 interface StatsCounterProps {
   value: number;
@@ -16,50 +17,48 @@ const StatsCounter = ({
   suffix = "",
   duration = 2,
 }: StatsCounterProps) => {
-  const [displayValue, setDisplayValue] = useState(0);
+  const [count, setCount] = useState(0);
   const controls = useAnimation();
-  const ref = useRef<HTMLSpanElement>(null);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          // Count animation
-          let start = 0;
-          const increment = Math.max(1, Math.floor(value / 100));
-          const incrementTime = (duration * 1000) / (value / increment);
+    if (inView) {
+      let start = 0;
+      const end = value;
+      const increment = end / (duration * 60);
 
-          const timer = setInterval(() => {
-            start += increment;
-            setDisplayValue(Math.min(start, value));
-            if (start >= value) clearInterval(timer);
-          }, incrementTime);
-
-          // Bounce animation
-          controls.start({
-            scale: [1, 1.1, 1],
-            transition: { duration: 0.5 }
-          });
-
-          observer.disconnect();
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          setCount(end);
+          clearInterval(timer);
+        } else {
+          setCount(Math.ceil(start));
         }
-      },
-      { threshold: 0.5 }
-    );
+      }, 1000 / 60);
 
-    if (ref.current) observer.observe(ref.current);
+      controls.start({
+        opacity: 1,
+        scale: [1, 1.1, 1],
+        transition: { duration: 0.5 }
+      });
 
-    return () => observer.disconnect();
-  }, [value, duration, controls]);
+      return () => clearInterval(timer);
+    }
+  }, [inView, value, duration, controls]);
 
   return (
     <motion.span
       ref={ref}
       initial={{ opacity: 0 }}
       animate={controls}
-      className={className}
+      className={`text-white ${className}`}
     >
-      {displayValue.toLocaleString()}{suffix}
+      {Math.floor(count).toLocaleString()}
+      {suffix}
     </motion.span>
   );
 };

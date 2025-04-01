@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import TeamCard from "@/components/about-us/team-card";
 import StatsCounter from "@/components/about-us/stats-counter";
+import Footer from "@/components/common/Footer";
 
 const AboutUs = () => {
   const teamMembers = [
@@ -35,9 +36,24 @@ const AboutUs = () => {
 
   const stats = [
     { value: 12, label: "Years Experience", suffix: "+" },
-    { value: 5000, label: "Students Helped", suffix: "+" }, 
+    { value: 5000, label: "Students Helped", suffix: "+" },
     { value: 98, label: "Success Rate", suffix: "%" },
     { value: 200, label: "Partner Institutions", suffix: "+" }
+  ];
+
+  const values = [
+    {
+      title: "Student First",
+      description: "Every decision prioritizes students' long-term success and wellbeing."
+    },
+    {
+      title: "Integrity",
+      description: "We maintain the highest ethical standards in all our advice."
+    },
+    {
+      title: "Excellence",
+      description: "We continuously improve and stay updated with global trends."
+    }
   ];
 
   return (
@@ -58,7 +74,7 @@ const AboutUs = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-6xl font-bold mb-4"
             >
-              About Conquest Education
+              About Conquest
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -85,10 +101,10 @@ const AboutUs = () => {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in 2012, Conquest Education began with a simple mission: to make quality international education accessible to all.
+                Founded in 2012, Conquest Education began with a simple mission: to make quality international education accessible to all. What started as a small consultancy in New Delhi has grown into a trusted global education partner.
               </p>
               <p className="text-lg text-gray-600">
-                Today, we're proud to have helped thousands of students from 15 countries achieve their academic dreams.
+                Today, we're proud to have helped thousands of students from 15 countries achieve their academic dreams at top institutions worldwide.
               </p>
             </motion.div>
             <motion.div
@@ -110,28 +126,29 @@ const AboutUs = () => {
       </section>
 
       <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-          >
-            {stats.map((stat, index) => (
-  <div key={index} className="p-4">
-    <StatsCounter
-      value={stat.value}
-      suffix={stat.suffix}
-      duration={1.5}
-      className="text-4xl md:text-5xl font-bold mb-2" 
-    />
-    <p className="text-lg">{stat.label}</p>
-  </div>
-))}
-          </motion.div>
+  <div className="container mx-auto px-6">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+    >
+      {stats.map((stat, index) => (
+        <div key={index} className="p-4">
+          <StatsCounter 
+            value={stat.value}
+            suffix={stat.suffix}
+            duration={1.5}
+            className="text-4xl md:text-5xl font-bold mb-2" 
+          />
+          <p className="text-lg">{stat.label}</p>
         </div>
-      </section>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
@@ -182,20 +199,7 @@ const AboutUs = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Student First",
-                description: "Every decision prioritizes students' long-term success and wellbeing."
-              },
-              {
-                title: "Integrity",
-                description: "We maintain the highest ethical standards in all our advice."
-              },
-              {
-                title: "Excellence",
-                description: "We continuously improve and stay updated with global trends."
-              }
-            ].map((value, index) => (
+            {values.map((value, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -211,6 +215,8 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </div>
   );
 };

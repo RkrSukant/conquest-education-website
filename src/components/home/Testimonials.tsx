@@ -9,22 +9,19 @@ const Testimonials = () => {
       name: "Raghav Rags", 
       text: "Thanks to Conquest Education Consultancy, I got admitted to my dream university with a 50% scholarship! The counselors understood my profile perfectly.",
       role: "MS in Computer Science, University of Toronto",
-      avatar: "/avatars/raghav.jpg",
-      rating: 5
+      avatar: "/avatars/raghav.jpg"
     },
     { 
       name: "Sagun GunsyBoi", 
       text: "Highly professional and supportive team. They handled everything from applications to visa processing seamlessly.",
       role: "MBA, London Business School",
-      avatar: "/avatars/sagun.jpg",
-      rating: 5
+      avatar: "/avatars/sagun.jpg"
     },
     { 
       name: "Shambhav ZiMow", 
       text: "Even after I switched consultancies mid-process, the Conquest team still helped me get into my top choice. Their dedication is unmatched!",
       role: "BSc Economics, University of Sydney",
-      avatar: "/avatars/shambhav.jpg",
-      rating: 4
+      avatar: "/avatars/shambhav.jpg"
     },
   ];
 
@@ -108,7 +105,6 @@ const Testimonials = () => {
                     className="object-cover"
                   />
                 </div>
-                {renderStars(testimonial.rating)}
               </div>
               <blockquote className="text-gray-700 italic mb-6">
                 "{testimonial.text}"

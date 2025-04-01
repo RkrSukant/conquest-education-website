@@ -22,15 +22,7 @@ const Footer = () => {
     ],
     resources: [
       { name: "Blog", path: "/blog" },
-      { name: "Country Guides", path: "/guides" },
       { name: "FAQs", path: "/faqs" },
-      { name: "Events", path: "/events" }
-    ],
-    contact: [
-      { name: "Contact Us", path: "/contact" },
-      { name: "Book Consultation", path: "/consultation" },
-      { name: "Live Chat", path: "/chat" },
-      { name: "Emergency Contact", path: "/emergency" }
     ]
   };
 
