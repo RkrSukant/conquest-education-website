@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -16,7 +17,7 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Study In", path: "/study-in" },
     { name: "Testimonials", path: "/testimonials" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Contact Us", path: "/contact-us" },
   ];
 
   useEffect(() => {
@@ -54,18 +55,25 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/">
-            <motion.span
-              whileHover={{ scale: 1.05 }}
-              className={`text-2xl font-bold transition-all duration-300 ${
-                isScrolled || isOpen || pathname !== "/" 
-                  ? "text-[#327fc6]"
-                  : "text-white"
-              }`}
-            >
-              Conquest Education
-            </motion.span>
-          </Link>
+        <Link href="/">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className={`transition-all duration-300 ${
+      isScrolled || isOpen || pathname !== "/" 
+        ? "brightness-100"
+        : "brightness-0 invert"
+    }`}
+  >
+    <Image
+      src="/main-logo.png"
+      alt="Conquest Education Logo"
+      width={400}
+      height={100}
+      className="h-20 w-auto" // Maintain aspect ratio, set height to match your design
+      priority
+    />
+  </motion.div>
+</Link>
 
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -165,7 +173,7 @@ const Navbar = () => {
                 </div>
                 <div className="pb-10 pt-6">
                   <Link
-                    href="/contact"
+                    href="/contact-us"
                     className="block w-full text-center px-6 py-3 bg-[#327fc6] text-white rounded-lg hover:bg-[#285f94] transition-colors duration-300 shadow-md"
                     onClick={toggleMenu}
                   >
