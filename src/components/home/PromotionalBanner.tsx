@@ -14,7 +14,7 @@ const PromotionalBanner = () => {
       type: "advertisement",
       title: "Free Consultation",
       description: "Get expert advice for your study abroad journey",
-      image: "/promo/consult.jpg",
+      image: "/images/promo/consult.jpg",
       cta: "Book Now",
       link: "/consult",
       showButton: true
@@ -23,14 +23,14 @@ const PromotionalBanner = () => {
       type: "advertisement", 
       title: "Visa Assistance",
       description: "98% success rate with our visa experts",
-      image: "/promo/visa.jpg",
+      image: "/images/promo/visa.jpg",
       showButton: false
     },
     {
       type: "blog",
       title: "Top 5 Universities in Germany",
       excerpt: "Discover the best options for international students",
-      image: "/promo/germany-blog.jpg",
+      image: "/images/promo/germany-blog.jpg",
       cta: "Read More",
       link: "/blog/germany"
     }
@@ -100,7 +100,7 @@ const PromotionalBanner = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <div className="max-w-2xl">
                       {slide.type === "blog" && (
-                        <span className="bg-blue-600 text-xs font-semibold px-2 py-1 rounded-full mb-2 inline-block">
+                        <span className="bg-[#327fc7] text-xs font-semibold px-2 py-1 rounded-full mb-2 inline-block">
                           BLOG
                         </span>
                       )}

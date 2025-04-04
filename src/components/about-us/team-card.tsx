@@ -31,7 +31,7 @@ const TeamCard = ({ name, role, bio, image, delay = 0 }: TeamCardProps) => {
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-1">{name}</h3>
-        <p className="text-blue-600 font-medium mb-3">{role}</p>
+        <p className="text-[#327fc7] font-medium mb-3">{role}</p>
         <p className="text-gray-600">{bio}</p>
       </div>
     </motion.div>

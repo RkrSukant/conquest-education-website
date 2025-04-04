@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 font-semibold mb-3 block">WHY CHOOSE US</span>
+          <span className="text-[#327fc7] font-semibold mb-3 block">WHY CHOOSE US</span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Your Pathway to Global Education
           </h2>
@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">{feature.title}</h3>
               <p className="text-gray-600 mb-4">{feature.description}</p>
-              <button className="mt-auto text-blue-600 font-medium hover:text-blue-800 transition-colors">
+              <button className="mt-auto text-[#327fc7] font-medium hover:text-[#2a6cb3] transition-colors">
                 Learn more →
               </button>
             </motion.div>

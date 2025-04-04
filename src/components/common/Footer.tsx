@@ -9,8 +9,8 @@ const Footer = () => {
 
   const footerLinks = {
     company: [
-      { name: "About Us", path: "/about" },
-      { name: "Our Team", path: "/team" },
+      { name: "About Us", path: "/about-us" },
+      { name: "Our Team", path: "/about-us" },
       { name: "Testimonials", path: "/testimonials" },
       { name: "Careers", path: "/careers" }
     ],
@@ -27,14 +27,13 @@ const Footer = () => {
   };
 
   const socialMedia = [
-    { name: "Facebook", icon: "/icons/facebook.svg", url: "#" },
-    { name: "Twitter", icon: "/icons/twitter.svg", url: "#" },
-    { name: "LinkedIn", icon: "/icons/linkedin.svg", url: "#" },
-    { name: "Instagram", icon: "/icons/instagram.svg", url: "#" }
+    { name: "Facebook", icon: "/images/icons/ic_facebook.png", url: "https://www.facebook.com/p/Conquest-Education-Consultancy-61550937393666/" },
+    { name: "LinkedIn", icon: "/images/icons/ic_linkedin.png", url: "https://www.linkedin.com/in/conquest-education-consultancy-675821288/" },
+    { name: "Instagram", icon: "/images/icons/ic_instagram.png", url: "https://www.instagram.com/conquest_education/" }
   ];
 
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-6">
+    <footer className="bg-[#1a1a2e] text-white pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <motion.div 
@@ -46,30 +45,31 @@ const Footer = () => {
           >
             <Link href="/" className="flex items-center">
               <Image 
-                src="/logo-white.png" 
+                src="/main-logo.png" 
                 alt="Conquest Education Consultancy"
-                width={180}
-                height={40}
-                className="h-10 w-auto"
+                width={400}
+                height={100}
+                className="h-12 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-gray-400">
-              Empowering students to achieve their global education dreams since 2010.
+              Empowering students to achieve their global education dreams.
             </p>
             <div className="flex space-x-4">
               {socialMedia.map((social) => (
                 <a 
                   key={social.name} 
-                  href={social.url} 
-                  className="text-gray-400 hover:text-[#327fc6] transition-colors"
+                  href={social.url}
+                  target="_blank"
+                  className="text-gray-400 hover:text-[#327fc7] transition-colors"
                   aria-label={social.name}
                 >
                   <Image
                     src={social.icon}
                     alt={social.name}
-                    width={24}
-                    height={24}
-                    className="w-6 h-6"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
                   />
                 </a>
               ))}
@@ -93,7 +93,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link 
                       href={link.path} 
-                      className="text-gray-400 hover:text-[#327fc6] transition-colors"
+                      className="text-gray-400 hover:text-[#327fc7] transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -109,7 +109,7 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 my-8"
+          className="border-t border-[#16213e] my-8"
         />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
@@ -128,10 +128,10 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex space-x-4 mt-4 md:mt-0"
           >
-            <Link href="/privacy" className="hover:text-[#327fc6] transition-colors">
+            <Link href="/privacy" className="hover:text-[#327fc7] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-[#327fc6] transition-colors">
+            <Link href="/terms" className="hover:text-[#327fc7] transition-colors">
               Terms of Service
             </Link>
           </motion.div>

@@ -186,7 +186,7 @@ const StudyIn = () => {
                 key={i}
                 onClick={() => handleNavigation(i)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  i === realIndex ? 'bg-blue-600 w-6' : 'bg-gray-300'
+                  i === realIndex ? 'bg-[#327fc7] w-6' : 'bg-gray-300'
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
               />

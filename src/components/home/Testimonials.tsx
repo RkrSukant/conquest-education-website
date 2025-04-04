@@ -9,19 +9,19 @@ const Testimonials = () => {
       name: "Raghav Rags", 
       text: "Thanks to Conquest Education Consultancy, I got admitted to my dream university with a 50% scholarship! The counselors understood my profile perfectly.",
       role: "MS in Computer Science, University of Toronto",
-      avatar: "/avatars/raghav.jpg"
+      avatar: "/images/icons/ic_profile.png"
     },
     { 
       name: "Sagun GunsyBoi", 
       text: "Highly professional and supportive team. They handled everything from applications to visa processing seamlessly.",
       role: "MBA, London Business School",
-      avatar: "/avatars/sagun.jpg"
+      avatar: "/images/icons/ic_profile.png"
     },
     { 
       name: "Shambhav ZiMow", 
       text: "Even after I switched consultancies mid-process, the Conquest team still helped me get into my top choice. Their dedication is unmatched!",
       role: "BSc Economics, University of Sydney",
-      avatar: "/avatars/shambhav.jpg"
+      avatar: "/images/icons/ic_profile.png"
     },
   ];
 
@@ -73,7 +73,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-blue-600 font-semibold text-lg mb-2 block">TESTIMONIALS</span>
+          <span className="text-[#327fc7] font-semibold text-lg mb-2 block">TESTIMONIALS</span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Success Stories From Our Students
           </h2>
@@ -97,7 +97,7 @@ const Testimonials = () => {
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
               <div className="flex flex-col items-center mb-6">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-blue-100">
+                <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-[#327fc7]/20">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -121,7 +121,7 @@ const Testimonials = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300"
+            className="bg-[#327fc7] hover:bg-[#2a6cb3] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300"
           >
             Read More Success Stories
           </motion.button>

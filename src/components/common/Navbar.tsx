@@ -69,7 +69,7 @@ const Navbar = () => {
       alt="Conquest Education Logo"
       width={400}
       height={100}
-      className="h-20 w-auto" // Maintain aspect ratio, set height to match your design
+      className="h-16 w-auto"
       priority
     />
   </motion.div>
