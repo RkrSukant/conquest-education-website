@@ -29,7 +29,9 @@ const Footer = () => {
   const socialMedia = [
     { name: "Facebook", icon: "/images/icons/ic_facebook.png", url: "https://www.facebook.com/p/Conquest-Education-Consultancy-61550937393666/" },
     { name: "LinkedIn", icon: "/images/icons/ic_linkedin.png", url: "https://www.linkedin.com/in/conquest-education-consultancy-675821288/" },
-    { name: "Instagram", icon: "/images/icons/ic_instagram.png", url: "https://www.instagram.com/conquest_education/" }
+    { name: "Instagram", icon: "/images/icons/ic_instagram.png", url: "https://www.instagram.com/conquest_education/" },
+    {name: "tiktok", url: "https://www.tiktok.com/@conquest_education", icon: "/images/icons/ic_tiktok.png",},
+    {name: "whatsapp", url: "https://wa.me/+9779709200560", icon: "/images/icons/ic_whatsapp.png",},
   ];
 
   return (
@@ -52,9 +54,27 @@ const Footer = () => {
                 className="h-12 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-gray-400">
-              Empowering students to achieve their global education dreams.
-            </p>
+            <div className="space-y-2 text-gray-400">
+              <p className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                Icchumati park, Adwait Marg, Kathmandu
+              </p>
+              <p className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                +977 01-5919439
+              </p>
+              <p className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                frontdesk@conquestnepal.com
+              </p>
+            </div>
             <div className="flex space-x-4">
               {socialMedia.map((social) => (
                 <a 

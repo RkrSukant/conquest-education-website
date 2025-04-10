@@ -101,7 +101,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-              href="/contact-us"
+              href="/contact"
               className="ml-4 px-6 py-2 bg-[#327fc6] text-white rounded-lg hover:bg-[#285f94] transition-colors duration-300 shadow-md hover:shadow-lg"
             >
               Free Consultation

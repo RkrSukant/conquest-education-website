@@ -78,7 +78,7 @@ const AboutUs = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-6xl font-bold mb-4"
             >
-              About Conquest Education
+              About CEC
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
